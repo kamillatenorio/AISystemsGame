@@ -151,7 +151,7 @@ const gameData = [
             },
             { 
                 name: 'Character AI', 
-                description: 'simulates human conversations in dialogue format and provides answersto users’ questions.', 
+                description: 'simulates human conversations in dialogue format and provides answers to users’ questions.', 
                 link: 'https://character.ai/', 
                 image: 'card17.svg', // Use the local image path
                 correct: true 
