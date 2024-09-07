@@ -174,7 +174,7 @@ const gameData = [
     }
 ];
 
-// Track the score
+// Track the score and current game level
 let score = 0;
 let currentLevel = 0;
 
@@ -236,12 +236,14 @@ function selectSolution(solution) {
         score++;
         document.getElementById('score-value').textContent = score;
 
-        // Load next persona and solutions
+        // Check if there are more levels
         currentLevel++;
         if (currentLevel < gameData.length) {
+            // Load next persona and solutions
             loadGameLevel(currentLevel);
         } else {
-            alert('Congratulations! You completed all levels.');
+            // End of the game
+            endGame();
         }
     } else {
         // If incorrect, show the modal
@@ -272,6 +274,15 @@ function loadGameLevel(level) {
     const levelData = gameData[level];
     renderPersonaCard(levelData.persona); // Render the persona card
     renderSolutionCards(levelData.solutions); // Render the solution cards
+}
+
+// Function to replace game-container with "END OF THE GAME"
+function endGame() {
+    const gameContainer = document.getElementById('game-container');
+    gameContainer.innerHTML = "<h1>END OF THE GAME</h1>";
+    gameContainer.style.textAlign = 'center'; // Center the text
+    gameContainer.style.fontSize = '32px';    // Larger font size for the end message
+    gameContainer.style.fontFamily = "'Fira Sans', sans-serif"; // Ensure font consistency
 }
 
 // Initialize the game on DOM load
