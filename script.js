@@ -1,57 +1,109 @@
-// Array of solution cards with local image paths
-const solutions = [
-    { 
-        name: 'Simax', 
-        description: 'is a system that translates spoken or written text into sign language. The translation is signed by a digital, animated avatar.', 
-        link: 'https://simax.media/', 
-        image: 'card1.png', // Use the local image path
-        correct: false 
+// Array of personas and their corresponding solution cards
+const gameData = [
+    {
+        persona: {
+            image: 'persona-card.svg', // Persona image
+            text: 'I want a green city and healthy plants and trees. What can I do to achieve this?'
+        },
+        solutions: [
+            { 
+                name: 'Simax', 
+                description: 'is a system that translates spoken or written text into sign language. The translation is signed by a digital, animated avatar.', 
+                link: 'https://simax.media/', 
+                image: 'card1.png', // Use the local image path
+                correct: false 
+            },
+            { 
+                name: 'Flora Incognita', 
+                description: 'is an AI-supported app that automatically identifies more than 16,000 vascular plant species from photos.', 
+                link: 'https://floraincognita.com/', 
+                image: 'card2.svg', // Use the local image path
+                correct: false 
+            },
+            { 
+                name: 'DeepL', 
+                description: 'is a translation system that supports 33 languages. The system also enables the translation of PDF, Word, and PowerPoint files.', 
+                link: 'https://deepl.com', 
+                image: 'card3.svg', // Use the local image path
+                correct: false 
+            },
+            { 
+                name: 'Baumblick', 
+                description: 'app can predict which trees in Berlin will be most at risk of drought, allowing local residents to intervene early by watering them.', 
+                link: 'https://baumblick.qtrees.ai/', 
+                image: 'card4.svg', // Use the local image path
+                correct: true 
+            },
+            { 
+                name: 'SeaClear', 
+                description: 'is a project that uses robots and object recognition to identify and remove plastic debris from the sea floor.', 
+                link: 'https://seaclear-project.eu/', 
+                image: 'card5.svg', // Use the local image path
+                correct: false 
+            }        
+        ]
     },
-    { 
-        name: 'Flora Incognita', 
-        description: 'is an AI-supported app that automatically identifies more than 16,000 vascular plant species from photos.', 
-        link: 'https://floraincognita.com/', 
-        image: 'card2.svg', // Use the local image path
-        correct: false 
-    },
-    { 
-        name: 'DeepL', 
-        description: 'is a translation system that supports 33 languages. The system also enables the translation of PDF, Word, and PowerPoint files.', 
-        link: 'https://deepl.com', 
-        image: 'card3.svg', // Use the local image path
-        correct: false 
-    },
-    { 
-        name: 'Baumblick', 
-        description: 'app can predict which trees in Berlin will be most at risk of drought, allowing local residents to intervene early by watering them.', 
-        link: 'https://baumblick.qtrees.ai/', 
-        image: 'card4.svg', // Use the local image path
-        correct: true 
-    },
-    { 
-        name: 'SeaClear', 
-        description: 'is a project that uses robots and object recognition to identify and remove plastic debris from the sea floor.', 
-        link: 'hhttps://seaclear-project.eu/', 
-        image: 'card5.svg', // Use the local image path
-        correct: true 
+    {
+        persona: {
+            image: 'persona-card2.svg', // Different persona image
+            text: 'The pollution of the oceans is really a huge problem. Do you have any ideas on how we can act more effectively and quickly?'
+        },
+        solutions: [
+            { 
+                name: 'BirdVision', 
+                description: 'system uses cameras on wind turbines to detect and track birds and can shut down turbines in an emergency if birds are in danger.', 
+                link: 'https://birdvision.org/', 
+                image: 'card11.svg', // Use the local image path
+                correct: false 
+            },
+            { 
+                name: 'Grammarly', 
+                description: 'is a tool that helps you write clear, concise, and correct emails and documents.', 
+                link: 'https://grammarly.com', 
+                image: 'card8.svg', 
+                correct: false 
+            },
+            { 
+                name: 'Plantix', 
+                description: ' helps farmers to recognise (agricultural) plant diseases via a photo, gives tips for treatment, and thus increases crop yields.', 
+                link: 'https://plantix.net/en/', 
+                image: 'card9.svg', 
+                correct: false 
+            },
+            { 
+                name: 'Elsa AI', 
+                description: 'helps nonnative speakers to learn to speak English without an accent by providing instant feedback on pronunciation.', 
+                link: 'https://elsaspeak.com/en/', 
+                image: 'card10.svg', 
+                correct: false 
+            },
+            { 
+                name: 'SeaClear', 
+                description: 'is a project that uses robots and object recognition to identify and remove plastic debris from the sea floor.', 
+                link: 'https://seaclear-project.eu/', 
+                image: 'card5.svg', // Use the local image path
+                correct: true 
+            }
+        ]
     }
 ];
 
 // Track the score
 let score = 0;
+let currentLevel = 0;
 
 // Function to render the persona card dynamically
-function renderPersonaCard() {
+function renderPersonaCard(persona) {
     const personaCard = document.getElementById('persona-card');
 
     // HTML structure for the persona card
     const personaCardHTML = `
         <div class="persona-container">
             <div class="image-container">
-                <img src="persona-card.svg" alt="Persona Image">
+                <img src="${persona.image}" alt="Persona Image">
             </div>
             <div class="text">
-                I want a green city and healthy plants and trees. What can I do to achieve this?
+                ${persona.text}
             </div>
         </div>
     `;
@@ -61,7 +113,7 @@ function renderPersonaCard() {
 }
 
 // Function to render the solution cards dynamically
-function renderSolutionCards() {
+function renderSolutionCards(solutions) {
     const solutionCards = document.getElementById('solution-cards');
     solutionCards.innerHTML = ""; // Clear previous cards if any
 
@@ -97,7 +149,14 @@ function selectSolution(solution) {
         // If correct, increment the score
         score++;
         document.getElementById('score-value').textContent = score;
-        alert('Correct!');
+
+        // Load next persona and solutions
+        currentLevel++;
+        if (currentLevel < gameData.length) {
+            loadGameLevel(currentLevel);
+        } else {
+            alert('Congratulations! You completed all levels.');
+        }
     } else {
         // If incorrect, show the modal
         showModal();
@@ -122,10 +181,16 @@ function showModal() {
     };
 }
 
+// Function to load a specific game level
+function loadGameLevel(level) {
+    const levelData = gameData[level];
+    renderPersonaCard(levelData.persona); // Render the persona card
+    renderSolutionCards(levelData.solutions); // Render the solution cards
+}
+
 // Initialize the game on DOM load
 document.addEventListener('DOMContentLoaded', () => {
-    renderPersonaCard(); // Render the persona card first
-    renderSolutionCards(); // Render solution cards
+    loadGameLevel(currentLevel); // Start with the first level
     setupModal(); // Setup modal close functionality
 });
 
