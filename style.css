@@ -1,0 +1,187 @@
+/* General page styles */
+body {
+    font-family: 'Fira Sans', sans-serif;
+    background-image: url('background.png'); /* Background image */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Game container for the persona and solution cards */
+#game-container {
+    background-color: rgba(255, 255, 255, 0); /* Semi-transparent white overlay */
+    padding: 10px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0);
+}
+
+/* Layout for solution cards */
+#solution-cards {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* Card container */
+.card-container {
+    width: 279px;
+    height: 412px;
+    position: relative;
+}
+
+/* Card background with shadow */
+.card-body {
+    width: 279px;
+    height: 412px;
+    position: absolute;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Card shadow */
+}
+
+/* Card image */
+.card-image {
+    width: 249px;
+    height: 263px;
+    position: absolute;
+    left: 15px;
+    top: 23px;
+}
+
+/* Card description section */
+.card-description {
+    width: 248px;
+    height: 72px;
+    position: absolute;
+    left: 20px;
+    top: 304px;
+    color: black;
+    font-size: 15px;
+    font-family: 'Fira Sans', sans-serif;
+    font-weight: 900;
+    word-wrap: break-word;
+}
+
+.card-description span {
+    font-weight: 300;
+}
+
+/* Card link section */
+.card-link {
+    position: absolute;
+    left: 11px;
+    top: 382px;
+    color: black;
+    font-size: 15px;
+    font-family: 'Fira Sans', sans-serif;
+    font-weight: 300;
+    word-wrap: break-word;
+}
+
+/* Card link styling */
+.card-link a {
+    color: #1E90FF;
+    text-decoration: none;
+}
+
+.card-link a:hover {
+    text-decoration: underline;
+}
+
+/* Score container styles */
+#score-container {
+    position: relative;
+    margin-top: 40px;
+    width: 562px;
+    height: 186px;
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center;     /* Center vertically (optional) */
+    margin-left: auto;       /* Automatically adjust the left margin */
+    margin-right: auto;      /* Automatically adjust the right margin */
+}
+
+.score-background {
+    width: 100%;
+    height: 186px;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    background: rgba(8, 76, 2, 0.75);
+    border-radius: 20px;
+}
+
+.score-label {
+    position: absolute;
+    left: 186px;
+    top: 74px;
+    color: white;
+    font-size: 32px;
+    font-family: 'Fira Sans', sans-serif;
+    font-weight: 700;
+    word-wrap: break-word;
+}
+
+.score-value {
+    width: 67px;
+    height: 57px;
+    position: absolute;
+    left: 326px;
+    top: 74px;
+    color: white;
+    font-size: 32px;
+    font-family: 'Fira Sans', sans-serif;
+    font-weight: 700;
+    word-wrap: break-word;
+}
+
+/* Persona card section */
+#persona-card {
+    width: 100%;
+    display: flex;
+    justify-content: center; /* Center the content horizontally */
+    margin-bottom: 40px; /* Space between persona card and solution cards */
+}
+
+/* Persona card container with white background */
+#persona-card .persona-container {
+    width: 549px;
+    height: 412px;
+    background-color: white;
+    border-radius: 10px; /* Optional rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional shadow for effect */
+    position: relative;
+    display: flex;
+    padding: 20px;
+}
+
+/* Persona card image */
+#persona-card .image-container {
+    width: 256px;
+    height: 408px;
+    margin-right: 20px; /* Space between the image and the text */
+}
+
+#persona-card .image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image fits the container */
+}
+
+/* Persona card text */
+#persona-card .text {
+    width: 223px;
+    color: black;
+    font-size: 18px;
+    font-family: 'Fira Sans', sans-serif;
+    font-weight: 300;
+    word-wrap: break-word;
+    display: flex;
+    align-items: center; /* Vertically align the text */
+}
