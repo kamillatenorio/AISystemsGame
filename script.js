@@ -85,6 +85,49 @@ const gameData = [
                 correct: true 
             }
         ]
+    },
+    {
+        persona: {
+            image: 'persona-card3.svg', // Persona image
+            text: 'My grandma is losing her sight more and more every year. I’d love to make her day-to-day life easier, but I’m rarely around. Is there anything I can do to help her?'
+        },
+        solutions: [
+            { 
+                name: 'Claudette', 
+                description: 'analyses the terms of use and privacy policies of online platforms to determine whether they are compliant with EU law.', 
+                link: 'http://claudette.eui.eu/', 
+                image: 'card12.svg', // Use the local image path
+                correct: false 
+            },
+            { 
+                name: 'ChatGPT', 
+                description: 'simulates human conversations in dialogue format and provides answersto users’ questions.', 
+                link: 'https://chatgpt.com/', 
+                image: 'card13.png', // Use the local image path
+                correct: false 
+            },
+            { 
+                name: 'Stockfish', 
+                description: ' is a powerful chess AI algorithm that plays the game at world champion level.', 
+                link: 'https://stockfishchess.org/', 
+                image: 'card14.svg', // Use the local image path
+                correct: false 
+            },
+            { 
+                name: 'Seeing AI', 
+                description: 'supports visually impaired people, for example, by reading texts aloud, recognising and describing people, recognising products.', 
+                link: 'https://www.seeingai.com/', 
+                image: 'card15.svg', // Use the local image path
+                correct: true 
+            },
+            { 
+                name: 'Grammarly', 
+                description: 'is a tool that helps you write clear, concise, and correct emails and documents.', 
+                link: 'https://grammarly.com', 
+                image: 'card8.svg', 
+                correct: false 
+            },        
+        ]
     }
 ];
 
