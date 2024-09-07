@@ -27,6 +27,13 @@ const solutions = [
         link: 'https://baumblick.qtrees.ai/', 
         image: 'card4.svg', // Use the local image path
         correct: true 
+    },
+    { 
+        name: 'SeaClear', 
+        description: 'is a project that uses robots and object recognition to identify and remove plastic debris from the sea floor.', 
+        link: 'hhttps://seaclear-project.eu/', 
+        image: 'card5.svg', // Use the local image path
+        correct: true 
     }
 ];
 
