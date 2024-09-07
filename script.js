@@ -128,6 +128,49 @@ const gameData = [
                 correct: false 
             },        
         ]
+    },
+    {
+        persona: {
+            image: 'persona-card4.svg', // Persona image
+            text: 'I have been lonely for a while. Do you have any ideas that could help me overcome my loneliness?'
+        },
+        solutions: [
+            { 
+                name: 'Readow', 
+                description: 'makes suggestions for books a user may like based on their favourite books.', 
+                link: 'https://readow.ai/', 
+                image: 'card16.svg', // Use the local image path
+                correct: false 
+            },
+            { 
+                name: 'Seeing AI', 
+                description: 'supports visually impaired people, for example, by reading texts aloud, recognising and describing people, recognising products.', 
+                link: 'https://www.seeingai.com/', 
+                image: 'card15.svg', // Use the local image path
+                correct: false 
+            },
+            { 
+                name: 'Character AI', 
+                description: 'simulates human conversations in dialogue format and provides answersto users’ questions.', 
+                link: 'https://character.ai/', 
+                image: 'card17.svg', // Use the local image path
+                correct: true 
+            },
+            { 
+                name: 'PoliTrack', 
+                description: ' is an information platform on politicians and election-related information in Germany with visualisations and data analyses.', 
+                link: 'https://politrack.org/', 
+                image: 'card18.svg', // Use the local image path
+                correct: false 
+            },
+            { 
+                name: 'Plantix', 
+                description: ' helps farmers to recognise (agricultural) plant diseases via a photo, gives tips for treatment, and thus increases crop yields.', 
+                link: 'https://plantix.net/en/', 
+                image: 'card9.svg', 
+                correct: false 
+            }      
+        ]
     }
 ];
 
