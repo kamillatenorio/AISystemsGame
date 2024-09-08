@@ -388,7 +388,6 @@ function renderSolutionCards(solutions) {
             <div class="card-description">
                 <span><b>${solution.name} </b></span><span>${solution.description}</span>
             </div>
-            <div class="card-link">More Info: <a href="${solution.link}" target="_blank">${solution.link}</a></div>
         `;
 
         // Insert the card structure into the container
@@ -396,12 +395,6 @@ function renderSolutionCards(solutions) {
 
         // Add click event to check if the card is correct
         cardContainer.addEventListener('click', () => selectSolution(solution));
-
-        // Prevent card selection when clicking on the link
-        const link = cardContainer.querySelector('a');
-        link.addEventListener('click', (event) => {
-            event.stopPropagation(); // Stop click from propagating to the card
-        });
 
         // Append the card to the solution cards container
         solutionCards.appendChild(cardContainer);
