@@ -174,9 +174,10 @@ const gameData = [
     }
 ];
 
-// Track the score and current game level
+// Track the score, current game level, and attempt status
 let score = 0;
 let currentLevel = 0;
+let hasAttempted = false; // Track if user has already tried for this level
 
 // Function to render the persona card dynamically
 function renderPersonaCard(persona) {
@@ -237,11 +238,18 @@ function renderSolutionCards(solutions) {
 
 // Function to handle selecting a solution card
 function selectSolution(solution) {
-    if (solution.correct) {
-        // If correct, increment the score
-        score++;
-        document.getElementById('score-value').textContent = score;
+    if (!hasAttempted) {
+        if (solution.correct) {
+            // If correct and first try, increment the score
+            score++;
+            document.getElementById('score-value').textContent = score;
+        } else {
+            // If incorrect on the first try, mark as attempted
+            hasAttempted = true;
+        }
+    }
 
+    if (solution.correct) {
         // Check if there are more levels
         currentLevel++;
         if (currentLevel < gameData.length) {
@@ -255,6 +263,23 @@ function selectSolution(solution) {
         // If incorrect, show the modal
         showModal();
     }
+}
+
+// Function to load a specific game level
+function loadGameLevel(level) {
+    hasAttempted = false; // Reset the attempt flag for the new level
+    const levelData = gameData[level];
+    renderPersonaCard(levelData.persona); // Render the persona card
+    renderSolutionCards(levelData.solutions); // Render the solution cards
+}
+
+// Function to replace game-container with "END OF THE GAME"
+function endGame() {
+    const gameContainer = document.getElementById('game-container');
+    gameContainer.innerHTML = "<h1>END OF THE GAME</h1>";
+    gameContainer.style.textAlign = 'center'; // Center the text
+    gameContainer.style.fontSize = '32px';    // Larger font size for the end message
+    gameContainer.style.fontFamily = "'Fira Sans', sans-serif"; // Ensure font consistency
 }
 
 // Function to show the modal
@@ -275,41 +300,8 @@ function showModal() {
     };
 }
 
-// Function to load a specific game level
-function loadGameLevel(level) {
-    const levelData = gameData[level];
-    renderPersonaCard(levelData.persona); // Render the persona card
-    renderSolutionCards(levelData.solutions); // Render the solution cards
-}
-
-// Function to replace game-container with "END OF THE GAME"
-function endGame() {
-    const gameContainer = document.getElementById('game-container');
-    gameContainer.innerHTML = "<h1>END OF THE GAME</h1>";
-    gameContainer.style.textAlign = 'center'; // Center the text
-    gameContainer.style.fontSize = '32px';    // Larger font size for the end message
-    gameContainer.style.fontFamily = "'Fira Sans', sans-serif"; // Ensure font consistency
-}
-
 // Initialize the game on DOM load
 document.addEventListener('DOMContentLoaded', () => {
     loadGameLevel(currentLevel); // Start with the first level
     setupModal(); // Setup modal close functionality
 });
-
-// Function to setup modal close behavior (runs on DOMContentLoaded)
-function setupModal() {
-    const modal = document.getElementById('try-again-modal');
-
-    // Close the modal when the close button is clicked
-    document.querySelector('.close-btn').onclick = function() {
-        modal.style.display = 'none';
-    };
-
-    // Close the modal if the user clicks outside the modal content
-    window.onclick = function(event) {
-        if (event.target == modal) {
-            modal.style.display = 'none';
-        }
-    };
-}
