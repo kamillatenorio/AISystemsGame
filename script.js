@@ -171,6 +171,178 @@ const gameData = [
                 correct: false 
             }      
         ]
+    },
+    {
+        persona: {
+            image: 'persona-card5.svg', // Persona image
+            text: 'As a non-native English speaker working in an international company, I regularly write emails and reports in English, leading me to spend a lot of time checking grammar. Any suggestions?'
+        },
+        solutions: [
+            { 
+                name: 'KI4LSA', 
+                description: 'is a project that aims to ptimises traffic flow and pedestrian safety by analysing the situation on the road with sensors and changing the traffic lights accordingly..', 
+                link: 'https://www.iosb-ina.fraunhofer.de/en/divisions/Machine-Learning/Research-topics-and-projects/Project-KI4LSA-Artificial-intelligence-for-light-signal-systems.html', 
+                image: 'card19.svg', // Use the local image path
+                correct: false 
+            },
+            { 
+                name: 'Grammarly', 
+                description: 'is a tool that helps you write clear, concise, and correct emails and documents.', 
+                link: 'https://grammarly.com', 
+                image: 'card8.svg', 
+                correct: true 
+            },
+            { 
+                name: 'Dall-E', 
+                description: 'creates images based on text input. The generated images can be photorealistic or imitate a certain style and can be modified, for example, by inserting an element.', 
+                link: 'https://www.dallefree.ai/', 
+                image: 'card20.png', // Use the local image path
+                correct: false 
+            },
+            { 
+                name: 'Rainforrest Connection', 
+                description: 'is an technology that enables people to monitor and protect biodiversity and the health of the rainforest.', 
+                link: 'https://rfcx.org/', 
+                image: 'card21.svg', // Use the local image path
+                correct: false 
+            },
+            { 
+                name: 'apic.ai', 
+                description: 'analyses bee and bumblebee behaviour to consider the influence of environmental factors, farming practices, and substances on their health.', 
+                link: 'https://apic.ai/', 
+                image: 'card22.svg', 
+                correct: false 
+            }      
+        ]
+    },
+    {
+        persona: {
+            image: 'persona-card6.svg', // Persona image
+            text: 'I’m a farmer and I want to protect the bees in my region and fertilise my fields properly. How can I strike the right balance?'
+        },
+        solutions: [
+            { 
+                name: 'apic.ai', 
+                description: 'analyses bee and bumblebee behaviour to consider the influence of environmental factors, farming practices, and substances on their health.', 
+                link: 'https://apic.ai/', 
+                image: 'card22.svg', 
+                correct: true 
+            },
+            { 
+                name: 'Baumblick', 
+                description: 'app can predict which trees in Berlin will be most at risk of drought, allowing local residents to intervene early by watering them.', 
+                link: 'https://baumblick.qtrees.ai/', 
+                image: 'card4.svg', // Use the local image path
+                correct: false 
+            },
+            { 
+                name: 'SeaClear', 
+                description: 'is a project that uses robots and object recognition to identify and remove plastic debris from the sea floor.', 
+                link: 'https://seaclear-project.eu/', 
+                image: 'card5.svg', // Use the local image path
+                correct: false 
+            },        
+            { 
+                name: 'PoliTrack', 
+                description: ' is an information platform on politicians and election-related information in Germany with visualisations and data analyses.', 
+                link: 'https://politrack.org/', 
+                image: 'card18.svg', // Use the local image path
+                correct: false 
+            },
+            { 
+                name: 'ChatGPT', 
+                description: 'simulates human conversations in dialogue format and provides answersto users’ questions.', 
+                link: 'https://chatgpt.com/', 
+                image: 'card13.png', // Use the local image path
+                correct: false 
+            }
+        ]
+    },
+    {
+        persona: {
+            image: 'persona-card7.svg', // Persona image
+            text: 'Most of our teachers are completely overworked. How can we make their jobs easier?'
+        },
+        solutions: [
+            { 
+                name: 'Dall-E', 
+                description: 'creates images based on text input. The generated images can be photorealistic or imitate a certain style and can be modified, for example, by inserting an element.', 
+                link: 'https://www.dallefree.ai/', 
+                image: 'card20.png', // Use the local image path
+                correct: false 
+            },
+            { 
+                name: 'Rainforrest Connection', 
+                description: 'is an technology that enables people to monitor and protect biodiversity and the health of the rainforest.', 
+                link: 'https://rfcx.org/', 
+                image: 'card21.svg', // Use the local image path
+                correct: false 
+            },
+            { 
+                name: 'Fobizz', 
+                description: 'presents a collection of tools to support teachers to plan and deliver lessons.', 
+                link: 'https://tools.fobizz.com/', 
+                image: 'card23.svg', // Use the local image path
+                correct: true 
+            },
+            { 
+                name: 'PoliTrack', 
+                description: ' is an information platform on politicians and election-related information in Germany with visualisations and data analyses.', 
+                link: 'https://politrack.org/', 
+                image: 'card18.svg', // Use the local image path
+                correct: false 
+            },
+            { 
+                name: 'Claude', 
+                description: 'is a chatbot that can support various tasks, such as brainstorming ideas, generating text and code, help you understand subjects.', 
+                link: 'https://claude.ai/', 
+                image: 'card24.svg', 
+                correct: false 
+            }      
+        ]
+    },
+    {
+        persona: {
+            image: 'persona-card8.svg', // Persona image
+            text: 'It’s my partner’s birthday and I have no idea what to get as a present. Do you?'
+        },
+        solutions: [
+            { 
+                name: 'Claude', 
+                description: 'is a chatbot that can support various tasks, such as brainstorming ideas, generating text and code, help you understand subjects.', 
+                link: 'https://claude.ai/', 
+                image: 'card24.svg', 
+                correct: true 
+            },
+            { 
+                name: 'Stockfish', 
+                description: ' is a powerful chess AI algorithm that plays the game at world champion level.', 
+                link: 'https://stockfishchess.org/', 
+                image: 'card14.svg', // Use the local image path
+                correct: false 
+            },
+            { 
+                name: 'KI4LSA', 
+                description: 'is a project that aims to ptimises traffic flow and pedestrian safety by analysing the situation on the road with sensors and changing the traffic lights accordingly..', 
+                link: 'https://www.iosb-ina.fraunhofer.de/en/divisions/Machine-Learning/Research-topics-and-projects/Project-KI4LSA-Artificial-intelligence-for-light-signal-systems.html', 
+                image: 'card19.svg', // Use the local image path
+                correct: false 
+            },
+            { 
+                name: 'Flora Incognita', 
+                description: 'is an AI-supported app that automatically identifies more than 16,000 vascular plant species from photos.', 
+                link: 'https://floraincognita.com/', 
+                image: 'card2.svg', // Use the local image path
+                correct: false 
+            },
+            { 
+                name: 'DeepL', 
+                description: 'is a translation system that supports 33 languages. The system also enables the translation of PDF, Word, and PowerPoint files.', 
+                link: 'https://deepl.com', 
+                image: 'card3.svg', // Use the local image path
+                correct: false 
+            }
+        ]
     }
 ];
 
