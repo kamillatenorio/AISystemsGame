@@ -224,6 +224,12 @@ function renderSolutionCards(solutions) {
         // Add click event to check if the card is correct
         cardContainer.addEventListener('click', () => selectSolution(solution));
 
+        // Prevent card selection when clicking on the link
+        const link = cardContainer.querySelector('a');
+        link.addEventListener('click', (event) => {
+            event.stopPropagation(); // Stop click from propagating to the card
+        });
+
         // Append the card to the solution cards container
         solutionCards.appendChild(cardContainer);
     });
