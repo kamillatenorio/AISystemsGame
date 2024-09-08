@@ -298,3 +298,86 @@ body {
         padding: 15px;
     }
 }
+
+
+/* End game container styles */
+.end-game-container {
+    text-align: center;
+    padding: 20px;
+    font-family: 'Fira Sans', sans-serif;
+    background-color: rgba(255, 255, 255, 0.8); /* White with high transparency */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow */
+    margin-bottom: 20px;
+}
+
+/* Slide deck container */
+#slide-deck-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    position: relative;
+    background-color: rgba(255, 255, 255, 0); /* White with high transparency */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow */
+    width: 340px; /* Adjusted to fit the nav arrows inside */
+}
+
+
+/* Slide card styles */
+.slide-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: white; /* Solid white background */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow */
+}
+
+.slide-image {
+    width: 80%;
+    height: auto;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+.slide-description {
+    text-align: justify;
+    padding: 10px;
+}
+
+/* Slide navigation arrows */
+.slide-nav {
+    font-size: 36px; /* Increased size */
+    cursor: pointer;
+    padding: 10px;
+    color: #333;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    user-select: none;
+    background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent background */
+    border-radius: 50%; /* Circular button */
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a shadow */
+}
+
+#prev-slide {
+    left: 10px; /* Moved inside the container */
+}
+
+#next-slide {
+    right: 10px; /* Moved inside the container */
+}
+
+.slide-nav:hover {
+    color: #1E90FF; /* Hover color */
+}

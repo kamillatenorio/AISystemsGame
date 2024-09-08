@@ -445,13 +445,67 @@ function loadGameLevel(level) {
     renderSolutionCards(levelData.solutions); // Render the solution cards
 }
 
-// Function to replace game-container with "END OF THE GAME"
+// Function to replace game-container with "END OF THE GAME" and show the score
 function endGame() {
     const gameContainer = document.getElementById('game-container');
-    gameContainer.innerHTML = "<h1>END OF THE GAME</h1>";
-    gameContainer.style.textAlign = 'center'; // Center the text
-    gameContainer.style.fontSize = '32px';    // Larger font size for the end message
-    gameContainer.style.fontFamily = "'Fira Sans', sans-serif"; // Ensure font consistency
+    gameContainer.innerHTML = ''; // Clear the game container
+
+    // Create end game container
+    const endGameContainer = document.createElement('div');
+    endGameContainer.classList.add('end-game-container');
+
+    // Add end of game message and score
+    const endMessage = `
+        <h1>END OF THE GAME</h1>
+        <h2>Your Final Score: ${score} out of 8</h2>
+        <div id="slide-deck-container">
+            <div id="prev-slide" class="slide-nav">&lt;</div>
+            <div id="slide-deck" class="slide-deck"></div>
+            <div id="next-slide" class="slide-nav">&gt;</div>
+        </div>
+    `;
+
+    endGameContainer.innerHTML = endMessage;
+    gameContainer.appendChild(endGameContainer);
+
+    // Gather all solution cards for the slideshow
+    const allSolutionCards = [];
+    gameData.forEach(level => {
+        level.solutions.forEach(solution => {
+            const cardHTML = `
+                <div class="slide-card">
+                    <img class="slide-image" src="${solution.image}" alt="${solution.name}">
+                    <div class="slide-description">
+                        <span><b>${solution.name} </b></span><span>${solution.description}</span>
+                    </div>
+                    <div class="card-link">More Info: <a href="${solution.link}" target="_blank">${solution.link}</a></div>
+                </div>
+            `;
+            allSolutionCards.push(cardHTML);
+        });
+    });
+
+    // Insert the first few slides into the slide deck
+    const slideDeck = document.getElementById('slide-deck');
+    slideDeck.innerHTML = allSolutionCards[0]; // Start with the first slide
+
+    let currentSlide = 0;
+
+    // Function to show the next slide
+    function showNextSlide() {
+        currentSlide = (currentSlide + 1) % allSolutionCards.length;
+        slideDeck.innerHTML = allSolutionCards[currentSlide];
+    }
+
+    // Function to show the previous slide
+    function showPrevSlide() {
+        currentSlide = (currentSlide - 1 + allSolutionCards.length) % allSolutionCards.length;
+        slideDeck.innerHTML = allSolutionCards[currentSlide];
+    }
+
+    // Event listeners for navigation
+    document.getElementById('next-slide').addEventListener('click', showNextSlide);
+    document.getElementById('prev-slide').addEventListener('click', showPrevSlide);
 }
 
 // Function to show the modal
