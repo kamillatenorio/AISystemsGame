@@ -381,3 +381,36 @@ body {
 .slide-nav:hover {
     color: #1E90FF; /* Hover color */
 }
+
+/* Footer styles */
+#game-footer {
+    width: 100%;
+    text-align: center;
+    background-color: transparent; /* Make it transparent or match the background */
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
+
+#game-footer p {
+    font-size: 12px; /* Small font size */
+    color: white; /* White text */
+    margin: 0;
+    padding: 0 10px;
+    font-family: 'Fira Sans', sans-serif;
+    line-height: 1.5;
+    opacity: 0.8; /* Slight transparency for the text */
+}
+
+/* Link styles for the footer */
+#game-footer a {
+    color: white; /* White link */
+    opacity: 0.8; /* Make link slightly transparent to match other text */
+}
+
+#game-footer a:hover {
+    text-decoration: underline; /* Underline on hover for visibility */
+    opacity: 1; /* Full opacity when hovered */
+}
+
