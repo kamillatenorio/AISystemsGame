@@ -349,7 +349,14 @@ const gameData = [
 // Track the score, current game level, and attempt status
 let score = 0;
 let currentLevel = 0;
-let hasAttempted = false; // Track if user has already tried for this level
+let hasAttempted = false;
+
+// Start game by hiding the start page and showing the game container
+document.getElementById('start-button').addEventListener('click', () => {
+    document.getElementById('start-page').style.display = 'none';
+    document.getElementById('game-container').style.display = 'block';
+    loadGameLevel(currentLevel); // Start the game from the first level
+});
 
 // Function to render the persona card dynamically
 function renderPersonaCard(persona) {

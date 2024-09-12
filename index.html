@@ -9,7 +9,18 @@
     <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div id="game-container">
+    <!-- Start Page -->
+    <div id="start-page">
+        <h1>Hello!</h1>
+        <p>
+            You are an AI consultant and know a lot of different AI systems that can support people in different tasks. 
+            Could you provide support to the following individuals by recommending AI systems based on their problems?
+        </p>
+        <button id="start-button">Start Game</button>
+    </div>
+
+    <!-- Game Container (Initially Hidden) -->
+    <div id="game-container" style="display: none;">
         <!-- Persona card area -->
         <div id="persona-card"></div>
 
@@ -18,6 +29,7 @@
             <!-- Cards will be dynamically added here -->
         </div>
 
+        <!-- Score area -->
         <div id="score-container">
             <div class="score-background">
                 <span class="score-label">Score:</span>

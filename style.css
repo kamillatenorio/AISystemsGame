@@ -5,29 +5,72 @@ body {
     background-size: cover;
     background-position: center;
     display: flex;
-    justify-content: center;
-    align-items: flex-start; /* Align at the top to allow vertical scrolling */
-    min-height: 100vh;
+    flex-direction: column;
+    justify-content: center; /* Center the content vertically */
+    align-items: center; /* Center the content horizontally */
+    min-height: 100vh; /* Ensure the body takes up the full viewport height */
     margin: 0;
-    padding: 20px; /* Optional padding to avoid elements touching the edges */
+    padding: 20px;
     overflow-x: hidden; /* Disable horizontal scroll */
     overflow-y: auto; /* Enable vertical scroll */
 }
 
-/* Game container for the persona and solution cards */
+/* Main content wrapper */
 #game-container {
     width: 100%;
     max-width: 1300px; /* Adjust to accommodate 5 solution cards */
-    background-color: rgba(255, 255, 255, 0); /* Semi-transparent white overlay */
-    padding: 10px;
+    background-color: rgba(255, 255, 255, 0); /* Slight white transparency background */
+    padding: 20px;
     border-radius: 8px;
     text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Light shadow for better visual separation */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-bottom: 40px; /* Add space at the bottom for scrolling */
+    margin-bottom: 40px; /* Add space at the bottom */
+}
+
+
+/* Start page */
+#start-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    max-width: 800px;
+    padding: 50px;
+    background-color: rgba(255, 255, 255, 0.9); /* White with slight transparency */
+    border-radius: 20px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Add a shadow for depth */
+    margin-top: 100px;
+}
+
+#start-page h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+#start-page p {
+    font-size: 18px;
+    line-height: 1.5;
+    margin-bottom: 40px;
+}
+
+#start-button {
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: rgb(15, 91, 51); /* New color from the provided image */
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+#start-button:hover {
+    background-color: rgba(15, 91, 51, 0.8); /* Darker shade on hover */
 }
 
 /* Persona card section */
@@ -200,7 +243,7 @@ body {
 .score-label {
     display: inline-block;
     color: white;
-    font-size: 3vw; /* Scale font size based on viewport width */
+    font-size: 2vw; /* Scale font size based on viewport width */
     font-family: 'Fira Sans', sans-serif;
     font-weight: 700;
     word-wrap: break-word;
@@ -211,7 +254,7 @@ body {
 .score-value {
     display: inline-block;
     color: white;
-    font-size: 3vw; /* Scale font size based on viewport width */
+    font-size: 2vw; /* Scale font size based on viewport width */
     font-family: 'Fira Sans', sans-serif;
     font-weight: 700;
     word-wrap: break-word;
@@ -311,20 +354,21 @@ body {
     margin-bottom: 20px;
 }
 
-/* Slide deck container */
+
+/* Slide card container to center */
 #slide-deck-container {
     display: flex;
-    align-items: center;
-    justify-content: center;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
     margin-top: 20px;
     position: relative;
-    background-color: rgba(255, 255, 255, 0); /* White with high transparency */
+    background-color: rgba(255, 255, 255, 0); /* Transparent background */
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0); /* Light shadow */
     width: 340px; /* Adjusted to fit the nav arrows inside */
+    height: 100vh; /* Ensure it takes the full viewport height */
 }
-
 
 /* Slide card styles */
 .slide-card {
@@ -335,7 +379,10 @@ body {
     background-color: white; /* Solid white background */
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0); /* Light shadow */
+    width: 100%; /* Ensure it takes up full container width */
+    max-width: 300px; /* Limit width */
+    text-align: center;
 }
 
 .slide-image {
@@ -348,6 +395,18 @@ body {
 .slide-description {
     text-align: justify;
     padding: 10px;
+}
+
+/* Adjustments for larger screens */
+@media (min-width: 768px) {
+    #slide-deck-container {
+        width: 100%;
+        height: auto;
+    }
+
+    .slide-card {
+        max-width: 500px; /* Larger max width for bigger screens */
+    }
 }
 
 /* Slide navigation arrows */
@@ -371,11 +430,11 @@ body {
 }
 
 #prev-slide {
-    left: 10px; /* Moved inside the container */
+    left: 10px; /* Position on the left */
 }
 
 #next-slide {
-    right: 10px; /* Moved inside the container */
+    right: 10px; /* Position on the right */
 }
 
 .slide-nav:hover {
@@ -388,9 +447,9 @@ body {
     text-align: center;
     background-color: transparent; /* Make it transparent or match the background */
     padding: 10px 0;
-    position: fixed;
-    bottom: 0;
+    position: relative; /* Ensure it stays at the bottom, but not fixed */
     left: 0;
+    margin-top: auto; /* Push footer to the bottom */
 }
 
 #game-footer p {
@@ -413,4 +472,3 @@ body {
     text-decoration: underline; /* Underline on hover for visibility */
     opacity: 1; /* Full opacity when hovered */
 }
-
