@@ -132,7 +132,7 @@ const gameData = [
     {
         persona: {
             image: 'persona-card4.svg', // Persona image
-            text: 'I have been lonely for a while. Do you have any ideas that could help me overcome my loneliness?'
+            text: 'I have been feeling stressed lately, especially with my busy schedule. I would like to find books that uplift me. Any suggestions?'
         },
         solutions: [
             { 
@@ -140,7 +140,7 @@ const gameData = [
                 description: 'makes suggestions for books a user may like based on their favourite books.', 
                 link: 'https://readow.ai/', 
                 image: 'card16.svg', // Use the local image path
-                correct: false 
+                correct: true 
             },
             { 
                 name: 'Seeing AI', 
@@ -154,7 +154,7 @@ const gameData = [
                 description: 'simulates human conversations in dialogue format and provides answers to users’ questions.', 
                 link: 'https://character.ai/', 
                 image: 'card17.svg', // Use the local image path
-                correct: true 
+                correct: false 
             },
             { 
                 name: 'PoliTrack', 
