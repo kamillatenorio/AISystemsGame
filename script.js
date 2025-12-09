@@ -464,7 +464,7 @@ function endGame() {
             <div id="slide-deck" class="slide-deck"></div>
             <div id="next-slide" class="slide-nav">&gt;</div>
         </div>
-        <p> To learn more about AI, scroll down and go to the next page (IV. Cross-domain systems of artificial intelligence).</p></p>
+        <p> To learn more about AI, scroll down and go to the next page (IV. AI systems across domains).</p></p>
     `;
 
     endGameContainer.innerHTML = endMessage;
