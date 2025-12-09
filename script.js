@@ -8,14 +8,14 @@ const gameData = [
         solutions: [
             { 
                 name: 'Simax', 
-                description: 'is a system that translates spoken or written text into sign language. The translation is signed by a digital, animated avatar.', 
+                description: 'is a system that translates spoken or written text into sign language. The translation is presented by a digital, animated avatar in sign language.', 
                 link: 'https://simax.media/', 
                 image: 'card1.png', // Use the local image path
                 correct: false 
             },
             { 
                 name: 'Flora Incognita', 
-                description: 'is an AI-supported app that automatically identifies more than 16,000 vascular plant species from photos.', 
+                description: 'is an AI-powered app that automatically identifies more than 16,000 vascular plant species based on photos.', 
                 link: 'https://floraincognita.com/', 
                 image: 'card2.svg', // Use the local image path
                 correct: false 
@@ -29,14 +29,14 @@ const gameData = [
             },
             { 
                 name: 'Baumblick', 
-                description: 'app can predict which trees in Berlin will be most at risk of drought, allowing local residents to intervene early by watering them.', 
+                description: 'is an app that can predict which trees in Berlin are most threatened by drought, so residents can intervene early by watering them.', 
                 link: 'https://baumblick.qtrees.ai/', 
                 image: 'card4.svg', // Use the local image path
                 correct: true 
             },
             { 
                 name: 'SeaClear', 
-                description: 'is a project that uses robots and object recognition to identify and remove plastic debris from the sea floor.', 
+                description: 'is a project that uses robots and object recognition to identify and remove plastic waste from the seabed.', 
                 link: 'https://seaclear-project.eu/', 
                 image: 'card5.svg', // Use the local image path
                 correct: false 
@@ -46,40 +46,40 @@ const gameData = [
     {
         persona: {
             image: 'persona-card2.svg', // Different persona image
-            text: 'The pollution of the oceans is really a huge problem. Do you have any ideas on how we can act more effectively and quickly?'
+            text: 'Ocean pollution is really a huge problem. Do you have ideas on how we can act more effectively and quickly?'
         },
         solutions: [
             { 
                 name: 'BirdVision', 
-                description: 'system uses cameras on wind turbines to detect and track birds and can shut down turbines in an emergency if birds are in danger.', 
+                description: 'is a system that uses cameras on wind turbines to detect and track birds, and can shut down the turbines in emergencies when birds are in danger.', 
                 link: 'https://birdvision.org/', 
                 image: 'card11.svg', // Use the local image path
                 correct: false 
             },
             { 
                 name: 'Grammarly', 
-                description: 'is a tool that helps you write clear, concise, and correct emails and documents.', 
+                description: 'is a tool that helps you write clearly and precisely in English and corrects grammatically incorrect emails and documents.', 
                 link: 'https://grammarly.com', 
                 image: 'card8.svg', 
                 correct: false 
             },
             { 
                 name: 'Plantix', 
-                description: ' helps farmers to recognise (agricultural) plant diseases via a photo, gives tips for treatment, and thus increases crop yields.', 
+                description: 'helps farmers identify (agricultural) plant diseases based on a photo, provides tips for treatment, and thus increases crop yields.', 
                 link: 'https://plantix.net/en/', 
                 image: 'card9.svg', 
                 correct: false 
             },
             { 
                 name: 'Elsa AI', 
-                description: 'helps nonnative speakers to learn to speak English without an accent by providing instant feedback on pronunciation.', 
+                description: 'helps non-native speakers speak English without an accent by providing instant feedback on pronunciation.', 
                 link: 'https://elsaspeak.com/en/', 
                 image: 'card10.svg', 
                 correct: false 
             },
             { 
                 name: 'SeaClear', 
-                description: 'is a project that uses robots and object recognition to identify and remove plastic debris from the sea floor.', 
+                description: 'is a project that uses robots and object recognition to identify and remove plastic waste from the seabed.', 
                 link: 'https://seaclear-project.eu/', 
                 image: 'card5.svg', // Use the local image path
                 correct: true 
@@ -89,40 +89,40 @@ const gameData = [
     {
         persona: {
             image: 'persona-card3.svg', // Persona image
-            text: 'My grandma is losing her sight more and more every year. I’d love to make her day-to-day life easier, but I’m rarely around. Is there anything I can do to help her?'
+            text: 'My grandma is losing her eyesight more and more every year. I would like to make her everyday life easier, but I am rarely there. Can I help her somehow?'
         },
         solutions: [
             { 
                 name: 'Claudette', 
-                description: 'analyses the terms of use and privacy policies of online platforms to determine whether they are compliant with EU law.', 
+                description: 'analyzes the terms of use and privacy policies of online platforms to determine whether they comply with EU law.', 
                 link: 'http://claudette.eui.eu/', 
                 image: 'card12.svg', // Use the local image path
                 correct: false 
             },
             { 
                 name: 'ChatGPT', 
-                description: 'simulates human conversations in dialogue format and provides answersto users’ questions.', 
+                description: 'simulates human conversations in dialogue format and provides answers to users’ questions.', 
                 link: 'https://chatgpt.com/', 
                 image: 'card13.png', // Use the local image path
                 correct: false 
             },
             { 
                 name: 'Stockfish', 
-                description: ' is a powerful chess AI algorithm that plays the game at world champion level.', 
+                description: 'is a powerful chess AI algorithm that plays the game at world champion level.', 
                 link: 'https://stockfishchess.org/', 
                 image: 'card14.svg', // Use the local image path
                 correct: false 
             },
             { 
                 name: 'Seeing AI', 
-                description: 'supports visually impaired people, for example, by reading texts aloud, recognising and describing people, recognising products.', 
+                description: 'supports visually impaired people by, for example, reading texts aloud, recognizing and describing people and products.', 
                 link: 'https://www.seeingai.com/', 
                 image: 'card15.svg', // Use the local image path
                 correct: true 
             },
             { 
                 name: 'Grammarly', 
-                description: 'is a tool that helps you write clear, concise, and correct emails and documents.', 
+                description: 'is a tool that helps you write clearly and precisely in English and corrects grammatically incorrect emails and documents.', 
                 link: 'https://grammarly.com', 
                 image: 'card8.svg', 
                 correct: false 
@@ -132,40 +132,40 @@ const gameData = [
     {
         persona: {
             image: 'persona-card4.svg', // Persona image
-            text: 'I have been feeling stressed lately, especially with my busy schedule. I would like to find books that uplift me. Any suggestions?'
+            text: 'I have been stressed lately, especially because of my busy schedule. I would like to find books that I enjoy. Do you have any suggestions?'
         },
         solutions: [
             { 
                 name: 'Readow', 
-                description: 'makes suggestions for books a user may like based on their favourite books.', 
+                description: 'gives suggestions for books a user might like, based on their favorite books.', 
                 link: 'https://readow.ai/', 
                 image: 'card16.svg', // Use the local image path
                 correct: true 
             },
             { 
                 name: 'Seeing AI', 
-                description: 'supports visually impaired people, for example, by reading texts aloud, recognising and describing people, recognising products.', 
+                description: 'supports visually impaired people by, for example, reading texts aloud, recognizing people and products, and describing them.', 
                 link: 'https://www.seeingai.com/', 
                 image: 'card15.svg', // Use the local image path
                 correct: false 
             },
             { 
-                name: 'Character AI', 
-                description: 'simulates human conversations in dialogue format and provides answers to users’ questions.', 
-                link: 'https://character.ai/', 
-                image: 'card17.svg', // Use the local image path
+                name: 'Rainforrest Connection', 
+                description: 'is a technology that enables people to monitor and protect the biodiversity and health of the rainforest.', 
+                link: 'https://rfcx.org/', 
+                image: 'card21.svg', // Use the local image path
                 correct: false 
             },
             { 
                 name: 'PoliTrack', 
-                description: ' is an information platform on politicians and election-related information in Germany with visualisations and data analyses.', 
+                description: 'is an information platform about politicians and election-related information in Germany with visualizations and data analyses.', 
                 link: 'https://politrack.org/', 
                 image: 'card18.svg', // Use the local image path
                 correct: false 
             },
             { 
                 name: 'Plantix', 
-                description: ' helps farmers to recognise (agricultural) plant diseases via a photo, gives tips for treatment, and thus increases crop yields.', 
+                description: 'helps farmers identify (agricultural) plant diseases based on a photo, provides tips for treatment, and thus increases crop yields.', 
                 link: 'https://plantix.net/en/', 
                 image: 'card9.svg', 
                 correct: false 
@@ -175,19 +175,19 @@ const gameData = [
     {
         persona: {
             image: 'persona-card5.svg', // Persona image
-            text: 'As a non-native English speaker working in an international company, I regularly write emails and reports in English, leading me to spend a lot of time checking grammar. Any suggestions?'
+            text: 'As a non-native speaker working in an international company, I regularly write emails and reports in English, which means I spend a lot of time checking grammar. Do you have any suggestions?'
         },
         solutions: [
             { 
                 name: 'KI4LSA', 
-                description: 'is a project that aims to ptimises traffic flow and pedestrian safety by analysing the situation on the road with sensors and changing the traffic lights accordingly..', 
+                description: 'is a project aimed at optimizing pedestrian traffic flow and safety by analyzing the traffic situation using sensors and adjusting the traffic light control accordingly.', 
                 link: 'https://www.iosb-ina.fraunhofer.de/en/divisions/Machine-Learning/Research-topics-and-projects/Project-KI4LSA-Artificial-intelligence-for-light-signal-systems.html', 
                 image: 'card19.svg', // Use the local image path
                 correct: false 
             },
             { 
                 name: 'Grammarly', 
-                description: 'is a tool that helps you write clear, concise, and correct emails and documents.', 
+                description: 'is a tool that helps you write clearly and precisely in English and corrects grammatically incorrect emails and documents.', 
                 link: 'https://grammarly.com', 
                 image: 'card8.svg', 
                 correct: true 
@@ -201,14 +201,14 @@ const gameData = [
             },
             { 
                 name: 'Rainforrest Connection', 
-                description: 'is an technology that enables people to monitor and protect biodiversity and the health of the rainforest.', 
+                description: 'is a technology that enables people to monitor and protect the biodiversity and health of the rainforest.', 
                 link: 'https://rfcx.org/', 
                 image: 'card21.svg', // Use the local image path
                 correct: false 
             },
             { 
                 name: 'apic.ai', 
-                description: 'analyses bee and bumblebee behaviour to consider the influence of environmental factors, farming practices, and substances on their health.', 
+                description: 'analyzes the behavior of bees and bumblebees to detect the impact of environmental factors, agricultural practices, and substances on their health.', 
                 link: 'https://apic.ai/', 
                 image: 'card22.svg', 
                 correct: false 
@@ -218,40 +218,40 @@ const gameData = [
     {
         persona: {
             image: 'persona-card6.svg', // Persona image
-            text: 'I’m a farmer and I want to protect the bees in my region and fertilise my fields properly. How can I strike the right balance?'
+            text: 'I am a farmer and want to protect the bees in my region and fertilize my fields properly. How do I find the right balance?'
         },
         solutions: [
             { 
                 name: 'apic.ai', 
-                description: 'analyses bee and bumblebee behaviour to consider the influence of environmental factors, farming practices, and substances on their health.', 
+                description: 'analyzes the behavior of bees and bumblebees to detect the impact of environmental factors, agricultural practices, and substances on their health.', 
                 link: 'https://apic.ai/', 
                 image: 'card22.svg', 
                 correct: true 
             },
             { 
                 name: 'Baumblick', 
-                description: 'app can predict which trees in Berlin will be most at risk of drought, allowing local residents to intervene early by watering them.', 
+                description: 'is an app that can predict which trees in Berlin are most threatened by drought, so residents can intervene early by watering them.', 
                 link: 'https://baumblick.qtrees.ai/', 
                 image: 'card4.svg', // Use the local image path
                 correct: false 
             },
             { 
                 name: 'SeaClear', 
-                description: 'is a project that uses robots and object recognition to identify and remove plastic debris from the sea floor.', 
+                description: 'is a project that uses robots and object recognition to identify and remove plastic waste from the seabed.', 
                 link: 'https://seaclear-project.eu/', 
                 image: 'card5.svg', // Use the local image path
                 correct: false 
             },        
             { 
                 name: 'PoliTrack', 
-                description: ' is an information platform on politicians and election-related information in Germany with visualisations and data analyses.', 
+                description: 'is an information platform about politicians and election-related information in Germany with visualizations and data analyses.', 
                 link: 'https://politrack.org/', 
                 image: 'card18.svg', // Use the local image path
                 correct: false 
             },
             { 
                 name: 'ChatGPT', 
-                description: 'simulates human conversations in dialogue format and provides answersto users’ questions.', 
+                description: 'simulates human conversations in dialogue format and provides answers to users’ questions.', 
                 link: 'https://chatgpt.com/', 
                 image: 'card13.png', // Use the local image path
                 correct: false 
@@ -261,7 +261,7 @@ const gameData = [
     {
         persona: {
             image: 'persona-card7.svg', // Persona image
-            text: 'Most of our teachers are completely overworked. How can we make their jobs easier?'
+            text: 'Most of our teachers are completely overworked. How can we make their work easier?'
         },
         solutions: [
             { 
@@ -273,28 +273,28 @@ const gameData = [
             },
             { 
                 name: 'Rainforrest Connection', 
-                description: 'is an technology that enables people to monitor and protect biodiversity and the health of the rainforest.', 
+                description: 'is a technology that enables people to monitor and protect the biodiversity and health of the rainforest.', 
                 link: 'https://rfcx.org/', 
                 image: 'card21.svg', // Use the local image path
                 correct: false 
             },
             { 
                 name: 'Fobizz', 
-                description: 'presents a collection of tools to support teachers to plan and deliver lessons.', 
+                description: 'presents a collection of tools that support teachers in planning and conducting lessons.', 
                 link: 'https://tools.fobizz.com/', 
                 image: 'card23.svg', // Use the local image path
                 correct: true 
             },
             { 
                 name: 'PoliTrack', 
-                description: ' is an information platform on politicians and election-related information in Germany with visualisations and data analyses.', 
+                description: 'is an information platform about politicians and election-related information in Germany with visualizations and data analyses.', 
                 link: 'https://politrack.org/', 
                 image: 'card18.svg', // Use the local image path
                 correct: false 
             },
             { 
                 name: 'Claude', 
-                description: 'is a chatbot that can support various tasks, such as brainstorming ideas, generating text and code, help you understand subjects.', 
+                description: 'is a chatbot that can help with various tasks, such as brainstorming ideas, generating text and code, and understanding topics.', 
                 link: 'https://claude.ai/', 
                 image: 'card24.svg', 
                 correct: false 
@@ -304,33 +304,33 @@ const gameData = [
     {
         persona: {
             image: 'persona-card8.svg', // Persona image
-            text: 'It’s my partner’s birthday and I have no idea what to get as a present. Do you?'
+            text: 'My partner has a birthday and I have no idea what to give him. Do you?'
         },
         solutions: [
             { 
                 name: 'Claude', 
-                description: 'is a chatbot that can support various tasks, such as brainstorming ideas, generating text and code, help you understand subjects.', 
+                description: 'is a chatbot that can help with various tasks, such as brainstorming ideas, generating text and code, and understanding topics.', 
                 link: 'https://claude.ai/', 
                 image: 'card24.svg', 
                 correct: true 
             },
             { 
                 name: 'Stockfish', 
-                description: ' is a powerful chess AI algorithm that plays the game at world champion level.', 
+                description: 'is a powerful chess AI algorithm that plays the game at world champion level.', 
                 link: 'https://stockfishchess.org/', 
                 image: 'card14.svg', // Use the local image path
                 correct: false 
             },
             { 
                 name: 'KI4LSA', 
-                description: 'is a project that aims to ptimises traffic flow and pedestrian safety by analysing the situation on the road with sensors and changing the traffic lights accordingly..', 
+                description: 'is a project aimed at optimizing pedestrian traffic flow and safety by analyzing the situation on the street with sensors and adjusting the traffic light control accordingly.', 
                 link: 'https://www.iosb-ina.fraunhofer.de/en/divisions/Machine-Learning/Research-topics-and-projects/Project-KI4LSA-Artificial-intelligence-for-light-signal-systems.html', 
                 image: 'card19.svg', // Use the local image path
                 correct: false 
             },
             { 
                 name: 'Flora Incognita', 
-                description: 'is an AI-supported app that automatically identifies more than 16,000 vascular plant species from photos.', 
+                description: 'is an AI-powered app that automatically identifies more than 16,000 vascular plant species based on photos.', 
                 link: 'https://floraincognita.com/', 
                 image: 'card2.svg', // Use the local image path
                 correct: false 
@@ -457,12 +457,14 @@ function endGame() {
     // Add end of game message and score
     const endMessage = `
         <h1>END OF THE GAME</h1>
-        <h2>Your Final Score: ${score} out of 8</h2>
+        <h2>Your final score:  ${score} out of 8</h2>
+        <p>Great! You have helped some people by recommending AI systems that could be useful for them. There are a variety of AI systems that can support us in different tasks. The possibilities are huge! </p> 
         <div id="slide-deck-container">
             <div id="prev-slide" class="slide-nav">&lt;</div>
             <div id="slide-deck" class="slide-deck"></div>
             <div id="next-slide" class="slide-nav">&gt;</div>
         </div>
+        <p> To learn more about AI, scroll down and go to the next page (IV. Cross-domain systems of artificial intelligence).</p></p>
     `;
 
     endGameContainer.innerHTML = endMessage;
@@ -478,7 +480,7 @@ function endGame() {
                     <div class="slide-description">
                         <span><b>${solution.name} </b></span><span>${solution.description}</span>
                     </div>
-                    <div class="card-link">More Info: <a href="${solution.link}" target="_blank">${solution.link}</a></div>
+                    <div class="card-link">More information: <a href="${solution.link}" target="_blank">${solution.link}</a></div>
                 </div>
             `;
             allSolutionCards.push(cardHTML);
